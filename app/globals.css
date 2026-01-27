@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Dark mode (default) */
 :root {
   /* Background colors */
   --background: #0f0f0f;
@@ -27,6 +28,22 @@
     "Liberation Mono", monospace;
 }
 
+/* Light mode */
+:root.light {
+  /* Background colors */
+  --background: #ffffff;
+  --card: #f4f4f5;
+  --card-hover: #e4e4e7;
+
+  /* Text colors */
+  --foreground: #18181b;
+  --muted: #52525b;
+  --muted-foreground: #71717a;
+
+  /* Border */
+  --border: #e4e4e7;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -45,6 +62,7 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 a {
@@ -56,6 +74,11 @@ a {
 ::selection {
   background-color: var(--accent);
   color: var(--background);
+}
+
+/* Light mode selection needs dark text */
+:root.light ::selection {
+  color: #ffffff;
 }
 
 /* Scrollbar styling */

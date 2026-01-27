@@ -3,7 +3,7 @@ import { Container } from "./Container";
 
 const socialLinks = [
   {
-    href: "https://github.com/joeflynn",
+    href: "https://github.com/jflynn99",
     label: "GitHub",
     icon: (
       <svg
@@ -21,7 +21,7 @@ const socialLinks = [
     ),
   },
   {
-    href: "https://linkedin.com/in/joeflynn",
+    href: "https://www.linkedin.com/in/joe-flynn-050437140/",
     label: "LinkedIn",
     icon: (
       <svg
@@ -35,7 +35,7 @@ const socialLinks = [
     ),
   },
   {
-    href: "https://twitter.com/joeflynn",
+    href: "https://x.com/AiBabysteps",
     label: "X (Twitter)",
     icon: (
       <svg
