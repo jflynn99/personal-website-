@@ -91,7 +91,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             <span>{readingTime}</span>
           </div>
 
-          {frontmatter.tags.length > 0 && (
+          {frontmatter.tags && frontmatter.tags.length > 0 && (
             <div className="flex flex-wrap gap-2 mt-4">
               {frontmatter.tags.map((tag) => (
                 <TagBadge

@@ -1,0 +1,67 @@
+---
+title: "Four AIs Walk Into a Portfolio Project…"
+description: "One of my goals this year was to build a personal portfolio site."
+image: "/images/blog/four-ais-walk-into-a-portfolio-project.png"
+tech:
+  - Claude
+  - Gemini
+  - ChatGPT
+  - Lovable
+featured: false
+order: 11
+---
+
+One of [my goals](https://aibabysteps.wordpress.com/2025/01/07/marriage-to-metrics-my-2024-in-review/) this year was to build a personal portfolio site. I wanted to do this for free and deploy it myself because I like a challenge (yeah I’m cheap). I was starting from scratch with only vague ideas, a fistful of prompts, and some friendly AIs.
+
+[**ChatGPT**](https://chat.openai.com/) – **Nice ideas, rough around the edges**
+
+I began with ChatGPT, my usual go-to tool. It helped plan and structure things well, creating acceptable V1 code and progressing the project by offering nice additional touches. Its idea to add an auto-selecting dark mode was very well received.
+
+But when I switched models from 4o to o3 it got a bit muddled. o3’s refactoring broke the lovely dark mode feature. It became a little frustrating trying to walk back changes or ask again for a simple fix. Standard LLM drama. The outputs were useful but far from beautiful.
+
+![chatgpt's v1](https://aibabysteps.wordpress.com/wp-content/uploads/2025/06/chatgpt-irative-.png?w=1024)
+
+On a separate side quest (see my next blog post on Product Prototyping), I had been experimenting with the coming wave of “vibe coding” app builders, [Bolt](https://www.boltai.co/), [v0](https://v0.dev/) and [Lovable](https://www.lovable.so/). I knew instantly my LLM frustrations were in vain. There would be an easier way. Before that though, I put through the same generic, vague initial prompt through our other top LLMs.
+
+  
+_“create a portfolio webpage for a product manager – make it slick and modern”_
+
+**Claude 4** **– Comedy Gold**
+
+  
+I tried Claude 4 – a top-tier model that now powers all the vibe coders. The results were…hilarious. It took my vague inputs and gave me wild floating icons that made me lol. This is mostly on me, generic in generic out. That said, Claude did have some nice touches – check the shading on the name and the icons were animated. 
+
+![Claude 4.0](https://aibabysteps.wordpress.com/wp-content/uploads/2025/06/claude-1-shot-floaters.png)
+
+**Gemini** **– LLM Champion**
+
+Gemini did a very decent [one-shot job](https://g.co/gemini/share/20d2fb38d6a0). It was clean, clear, and visually sound – easily the best of the text models. If I’d pushed it further, we could probably have developed something decent together. No fuss, minimal drama, and surprisingly good taste. Google are back.
+
+![](https://aibabysteps.wordpress.com/wp-content/uploads/2025/06/gem-1.png?w=1024)
+
+**Lovable – The Game-Changer**
+
+Based on my prototyping experience, I then gave Lovable the same prompt. The difference was wild. It took my vague input and turned it into something slick, coherent, and genuinely useful. Layout, spacing, coulour choices – all nailed. Easily the standout. 
+
+You get 5 prompts a day on the free tier, I used the other 4 making minor changes, add in a link to this blog, and getting some of my copy on the page. 20 minutes work. You can sync Lovable (and Bolt & v0) projects directly to [GitHub](https://github.com/) where you can edit freely. I added the rest of the copy there, this took around an hour. If you have a CV or other document you can simply add it in as context and have it build you a site based on this. You can easily one-shot a personal website – no need to edit text files like a dork.
+
+**Going live**
+
+After some consultation with ChatGPT I decided to publish on [Vercel](https://vercel.com/) (home of v0) – because it offered a fast, free deployment process with seamless GitHub integration – perfect for quickly iterating on a project like this without getting bogged down in the _slightly_ harder GitHub process. (You can publish directly on Lovable in a single click – I wanted it in GitHub though). 15 minutes later (after a quick domain name change) and we have  **[https://jflynnpmportfolio.vercel.app/](https://jflynnpmportfolio.vercel.app/)** live 🙂  
+  
+It’s not perfect, nor even finished, but it is fantastic for an hours work and $0!
+
+My hard to please wife dismissed my efforts and praised the AI. She may be on to something. 
+
+_(BTW if you have worked with me and would like to add a short testimonial please apply within! I accept outright lies, so go nuts!)_
+
+  
+**More than a wrapper** 
+
+Many AI tools are “GPT” wrappers, small projects that rely almost entirely on an API connection to the big models – Lovable, like v0 and Bolt to varying degrees feel like much more than this. They provide clear utility and value here. Beautiful (if a little generic) sites right through to fully functioning apps – from words. For personal projects, MVPs, prototypes they are game changers. For fully business sites? To be seen but that is their ambition!
+
+**Room for Improvement**
+
+That said, Lovable isn’t perfect – yet. One thing I’d love to see is a built-in prompt refiner like with Bolt, or at least some clarifying questions before the first draft is generated. The tool makes great assumptions, but when you’re working from a vague prompt (as I was deliberately), a little (optional) handholding could go a long way. Even something like, “Do you want a one-page site or a multi-section layout?” would make the early steps more predictable. Similarly, offering a couple of design directions to choose from – like “clean and minimal” vs. “playful and bold” – might help users who don’t yet have a strong aesthetic vision. Still, these are minor suggestions. The core experience is genuinely impressive.
+
+What I learned through all this is that LLMs are fantastic for planning and hand holding. I probably would’ve been satisfied with the outcome – until i saw whats coming. Tools like Lovable take the same language models and wrap them in workflows that guide the output toward functional, pretty, polished results. That’s where the magic is right now. If your goal is to ship something fast, beautiful, and reliable then these new AI-native tools are the way forward. I’ll run some more complex product prototyping through them next!
