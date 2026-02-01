@@ -1,12 +1,14 @@
 import { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/posts";
 import { getAllProjects } from "@/lib/projects";
+import { getAllBooks } from "@/lib/books";
 
 const SITE_URL = "https://joeflynn.io";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
   const projects = getAllProjects();
+  const books = getAllBooks();
 
   const blogUrls = posts.map((post) => ({
     url: `${SITE_URL}/blog/${post.slug}`,
@@ -49,7 +51,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.5,
     },
+    {
+      url: `${SITE_URL}/books`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
     ...blogUrls,
     ...projectUrls,
+    ...books
+      .filter((book) => book.hasReview)
+      .map((book) => ({
+        url: `${SITE_URL}/books/${book.slug}`,
+        lastModified: new Date(book.frontmatter.dateRead),
+        changeFrequency: "monthly" as const,
+        priority: 0.5,
+      })),
   ];
 }
