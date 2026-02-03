@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://joeflynn.io/sitemap.xml",
+    sitemap: "https://joeflynnpm.com/sitemap.xml",
   };
 }

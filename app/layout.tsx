@@ -4,7 +4,7 @@ import { Header, Footer } from "@/components/layout";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://joeflynn.io"),
+  metadataBase: new URL("https://joeflynnpm.com"),
   title: {
     default: "Joe Flynn",
     template: "%s | Joe Flynn",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://joeflynn.io",
+    url: "https://joeflynnpm.com",
     siteName: "Joe Flynn",
     title: "Joe Flynn",
     description:

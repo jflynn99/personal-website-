@@ -58,7 +58,8 @@ export function Footer() {
       <Container>
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
           <p className="text-sm text-muted">
-            &copy; {currentYear} Joe Flynn. All rights reserved.
+            &copy; {currentYear} Joe Flynn. All rights reserved. Made with
+            love by Joe & Claude.
           </p>
 
           <div className="flex items-center gap-4">
@@ -86,6 +87,28 @@ export function Footer() {
                 aria-hidden="true"
               >
                 <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z" />
+              </svg>
+            </Link>
+            <Link
+              href="https://buttondown.com/jflynn1492"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted transition-colors hover:text-accent"
+              aria-label="Subscribe to newsletter"
+            >
+              <svg
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
               </svg>
             </Link>
           </div>

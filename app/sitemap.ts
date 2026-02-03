@@ -3,7 +3,7 @@ import { getAllPosts } from "@/lib/posts";
 import { getAllProjects } from "@/lib/projects";
 import { getAllBooks } from "@/lib/books";
 
-const SITE_URL = "https://joeflynn.io";
+const SITE_URL = "https://joeflynnpm.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();

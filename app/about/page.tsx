@@ -97,7 +97,7 @@ export default function AboutPage() {
 
         <div className="mt-6">
           <a
-            href="mailto:hello@joeflynn.io"
+            href="mailto:hello@joeflynnpm.com"
             className="inline-flex items-center gap-2 text-accent hover:text-accent-hover transition-colors"
           >
             <svg
@@ -113,7 +113,7 @@ export default function AboutPage() {
                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
               />
             </svg>
-            hello@joeflynn.io
+            hello@joeflynnpm.com
           </a>
         </div>
       </div>
