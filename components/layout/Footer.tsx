@@ -90,7 +90,7 @@ export function Footer() {
               </svg>
             </Link>
             <Link
-              href="https://buttondown.com/jflynn1492"
+              href="https://buttondown.com/jflynnpm"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted transition-colors hover:text-accent"
