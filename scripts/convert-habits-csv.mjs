@@ -29,7 +29,27 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Columns to keep (everything else is stripped)
+// Column name mappings (alternate names -> canonical names)
+const COLUMN_ALIASES = {
+  "Date": "Timestamp",
+  "Timestamp": "Timestamp",
+  "Sleep quality": "Sleep quality",
+  "Sleep score": "Sleep quality",
+  "Workout": "Workout",
+  "Coffee count": "Coffee count",
+  "Coffee": "Coffee count",
+  "Meditation?": "Meditation?",
+  "Medditation": "Meditation?",
+  "Bedtime reading?": "Bedtime reading?",
+  "Bedtime reading": "Bedtime reading?",
+  "Olive oil?": "Olive oil?",
+  "Olive Oil": "Olive oil?",
+  "Shower": "Shower",
+  "Alcohol": "Alcohol",
+  "Phone time": "Phone time",
+};
+
+// Columns to keep (canonical names)
 const COLUMNS_TO_KEEP = [
   "Timestamp",
   "Sleep quality",
@@ -77,17 +97,19 @@ function parseCSV(content) {
 function convertToJSON(csvContent) {
   const { headers, rows } = parseCSV(csvContent);
 
-  // Find indices for columns we want to keep
+  // Find indices for columns, using aliases to map to canonical names
   const columnIndices = {};
-  COLUMNS_TO_KEEP.forEach((col) => {
-    const idx = headers.indexOf(col);
-    if (idx !== -1) {
-      columnIndices[col] = idx;
+  headers.forEach((header, idx) => {
+    // Trim whitespace from header and check aliases
+    const trimmedHeader = header.trim();
+    const canonicalName = COLUMN_ALIASES[trimmedHeader];
+    if (canonicalName && COLUMNS_TO_KEEP.includes(canonicalName)) {
+      columnIndices[canonicalName] = idx;
     }
   });
 
   if (!("Timestamp" in columnIndices)) {
-    throw new Error("CSV must have a 'Timestamp' column");
+    throw new Error("CSV must have a 'Timestamp' or 'Date' column");
   }
 
   // Group data by year
@@ -97,10 +119,13 @@ function convertToJSON(csvContent) {
     const timestamp = row[columnIndices["Timestamp"]];
     if (!timestamp) return;
 
-    // Parse M/D/YYYY format
+    // Parse M/D/YYYY or M/D/YY format
     const datePart = timestamp.split(" ")[0];
-    const [month, day, year] = datePart.split("/").map(Number);
-    if (!month || !day || !year) return;
+    const [month, day, yearRaw] = datePart.split("/").map(Number);
+    if (!month || !day || !yearRaw) return;
+
+    // Handle 2-digit years (e.g., 24 -> 2024)
+    const year = yearRaw < 100 ? 2000 + yearRaw : yearRaw;
 
     const dateKey = `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
 
