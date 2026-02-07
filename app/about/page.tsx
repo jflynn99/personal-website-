@@ -50,23 +50,23 @@ export default function AboutPage() {
 
       <div className="prose prose-lg max-w-none">
         <p className="text-lg text-muted leading-relaxed">
-          I&apos;m a product manager and technologist based in the US. I&apos;m passionate
-          about building products that solve real problems and exploring how emerging
-          technologies like AI can transform industries.
+          I&apos;m a father, product manager, and technologist based in the UK. I&apos;m
+          passionate about building resonant products that solve real problems and
+          exploring how emerging technologies, especially AI, can transform the world.
         </p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">What I Do</h2>
         <p className="text-muted leading-relaxed">
-          By day, I work on product strategy and execution, helping teams ship products
-          that users love. I believe in data-driven decision making, rapid iteration,
-          and keeping the user at the center of everything we build.
+          I work on product at AMEX GBT Egencia. I believe in data-driven decision
+          making, rapid iteration, and keeping the user at the center of everything we
+          build. I am a major proponent in using AI to enhance Product work.
         </p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">What I Write About</h2>
         <p className="text-muted leading-relaxed">
-          On this blog, I share thoughts on product management frameworks, AI applications,
-          technology trends, and lessons learned from building products. I aim to write
-          content that&apos;s practical and actionable.
+          On this blog, I share thoughts on product management, AI applications,
+          technology trends, and lessons learned from building products at work and at
+          home. I aim to write content that&apos;s practical and actionable.
         </p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Get in Touch</h2>

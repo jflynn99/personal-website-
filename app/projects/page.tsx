@@ -18,7 +18,7 @@ export default function ProjectsPage() {
           Projects
         </h1>
         <p className="mt-2 text-muted">
-          A collection of projects I&apos;ve built and contributed to.
+          A collection of more project based articles where I produced real outputs.
         </p>
       </div>
 

@@ -44,7 +44,9 @@ export default function BooksPage({ searchParams }: BooksPageProps) {
       <div className="mb-8">
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Books</h1>
         <p className="mt-2 text-muted">
-          Books I&apos;ve read, rated, and reviewed.
+          Books I&apos;ve read, rated, and reviewed. It should be noted I am a generous
+          and enthusiastic reviewer, and some books may be downgraded if I read them
+          again now.
         </p>
       </div>
 

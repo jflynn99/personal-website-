@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Container } from "./Container";
@@ -15,6 +16,9 @@ const navLinks = [
 
 export function Header() {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-sm">
@@ -30,7 +34,8 @@ export function Header() {
             <ThemeSwitcher />
           </div>
 
-          <ul className="flex items-center gap-1 sm:gap-2">
+          {/* Desktop nav */}
+          <ul className="hidden items-center gap-1 sm:flex sm:gap-2">
             {navLinks.map((link) => {
               const isActive =
                 pathname === link.href || pathname.startsWith(`${link.href}/`);
@@ -50,8 +55,76 @@ export function Header() {
               );
             })}
           </ul>
+
+          {/* Hamburger button (mobile only) */}
+          <button
+            type="button"
+            className="rounded-md p-2 text-muted transition-colors hover:bg-card hover:text-foreground sm:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-expanded={isMenuOpen}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          >
+            {isMenuOpen ? (
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            )}
+          </button>
         </nav>
       </Container>
+
+      {/* Mobile dropdown menu */}
+      {isMenuOpen && (
+        <div className="border-t border-border bg-background sm:hidden">
+          <Container>
+            <ul className="flex flex-col py-2">
+              {navLinks.map((link) => {
+                const isActive =
+                  pathname === link.href || pathname.startsWith(`${link.href}/`);
+                return (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      onClick={closeMenu}
+                      className={`block rounded-md px-3 py-3 text-sm font-medium transition-colors ${
+                        isActive
+                          ? "bg-card text-accent"
+                          : "text-muted hover:bg-card hover:text-foreground"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </Container>
+        </div>
+      )}
     </header>
   );
 }

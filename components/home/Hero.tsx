@@ -10,7 +10,7 @@ export function Hero() {
         </h1>
         <p className="mt-6 text-lg text-muted sm:text-xl leading-relaxed">
           Product manager, technologist, and builder. I write about product management,
-          AI, and the intersection of technology and business.
+          AI, books, and other fun things!
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <Link
