@@ -12,7 +12,7 @@ export function BookCard({ book }: BookCardProps) {
 
   const card = (
     <div className="group flex h-full flex-col overflow-hidden rounded-lg border border-border bg-card transition-colors hover:border-accent/50 hover:bg-card-hover">
-      {frontmatter.coverImage && (
+      {frontmatter.coverImage ? (
         <div className="relative aspect-[2/3] overflow-hidden bg-background">
           <Image
             src={frontmatter.coverImage}
@@ -21,6 +21,12 @@ export function BookCard({ book }: BookCardProps) {
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
           />
+        </div>
+      ) : (
+        <div className="relative aspect-[2/3] overflow-hidden bg-gradient-to-br from-card via-background to-border flex items-end p-3">
+          <span className="text-sm font-medium text-foreground/70 line-clamp-4 leading-tight">
+            {frontmatter.title}
+          </span>
         </div>
       )}
 
