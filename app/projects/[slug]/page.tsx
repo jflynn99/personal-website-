@@ -6,6 +6,7 @@ import { Container } from "@/components/layout";
 import { getProjectBySlug, getProjectSlugs } from "@/lib/projects";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { mdxComponents } from "@/components/mdx";
+import remarkGfm from "remark-gfm";
 
 interface ProjectPageProps {
   params: { slug: string };
@@ -152,7 +153,11 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
-          <MDXRemote source={content} components={mdxComponents} />
+          <MDXRemote
+            source={content}
+            components={mdxComponents}
+            options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+          />
         </div>
 
         {/* Footer */}

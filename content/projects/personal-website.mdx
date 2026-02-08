@@ -1,44 +1,97 @@
 ---
-title: "Personal Website"
-description: "My personal brand site built with Next.js, Tailwind CSS, and MDX for content management."
-image: "/images/projects/personal-website.jpg"
+title: "The Age of Personal Software"
+date: "2026-02-08"
+description: "You can just do things - going from a free WordPress blog to a self-managed site using only natural language"
+image: "/images/projects/personal-website/Analytics.png"
 tech:
+  - Claude Code
   - Next.js
-  - TypeScript
+  - React
   - Tailwind CSS
-  - MDX
+  - Personal software
+  - AI
 featured: true
 order: 1
-githubUrl: "https://github.com/joeflynn/personal-website"
-liveUrl: "https://joeflynnpm.com"
 ---
 
-## Overview
+**You can just do things** 
 
-This is my personal website that consolidates my blog and portfolio into a single, cohesive platform. Built with modern web technologies for optimal performance and developer experience.
+Coding agents are so good, and so easy to use that you can now have software created for your personal needs. I don't mean personalising someone's else's software - I mean making it yourself, just for you. And by you I mean you, absolutely anybody. 
 
-## Features
+I can code things faster than I can write about the things I code. And I only code in English. That's so weird. The world has never been like this before. The marginal output per word is incredible. 
 
-- **MDX-powered blog** with tag filtering and reading time estimation
-- **Project showcase** with detailed write-ups for featured projects
-- **Dark mode only** design with a clean, minimal aesthetic
-- **SEO optimized** with Open Graph tags, Twitter cards, and RSS feed
-- **Fully responsive** layout that works on all devices
+It is fast and cheap enough to work for one time uses, yet it is useful, practical, and pretty enough to be lasting websites or apps. This is 'vibe coding' in the original sense of the term -  a year old this week.
 
-## Technical Highlights
+![Vibe coding](/images/projects/personal-website/ak-vibing.png)
 
-### Content Management
+But now the best developers in the world (not jackasses like me) are now mostly orchestrating agents, not doing artisanal hand coding like those distant relatives of ours way back in November. Little over 8 weeks ago. 
 
-All content is managed through MDX files, making it easy to write posts with embedded React components when needed. Gray-matter handles frontmatter parsing for metadata.
+![Inflection point](/images/projects/personal-website/Ak-80percent.png)
 
-### Performance
+The change in a year is immense. I have three simple use cases from the past few weeks. 
 
-The site is statically generated at build time for optimal performance. Images are optimized using Next.js Image component with lazy loading.
+**Interactive React Learning App**
 
-### Design System
+Having read the beginning of an enticing but paywalled article that described the history of computer science in 54 diagrams, rather than pay the hardworking authors I asked Claude to make me a version. Claude said sure, I'll make you an interactive react app, but had the good sense to ask me if 70 year old history will really help me with the complex modern topics I need to learn right now for my job. After taking this excellent suggestion onboard my react app is now tilted towards machine learning. Check it out: [CSin50](https://claude.ai/public/artifacts/54826ec7-0c9d-428c-881a-f9292d891786)
 
-Uses CSS custom properties for consistent theming. The amber accent color (#f59e0b) provides visual interest against the dark background (#0f0f0f).
+![CSin50](/images/projects/personal-website/reactapp-CS50.png)
 
-## Lessons Learned
+**Heat Mapper Visualisation Tool**
 
-Building this site reinforced the value of simplicity. Starting with a minimal feature set allowed me to ship faster and iterate based on actual needs rather than hypothetical requirements.
+I track a lot of personal data [2025](https://joeflynnpm.com/blog/annual-review-2025), [2024](https://joeflynnpm.com/blog/marriage-to-metrics-my-2024-in-review). My visualisations are not the best - basic google sheets stuff. I always liked the GitHub contribution tracker so I asked Claude Code to vibe me up one for my data. Minutes later I had a HTML tool that accepts csv data right from my sheets. An LLM failed to make me one of these just six months ago. It came with great features like a locked toggle for private data, and a year selector. 
+
+![githeatmapper](/images/projects/personal-website/githeatmapper.png)
+Heatmappers--
+![Heatmapper](/images/projects/personal-website/Heatmapper.png)
+
+Nice enough to go to my new website...
+
+**Personal Website**
+
+[joeflynnpm.com](https://joeflynnpm.com/) is now live and kicking! Look at me knocking off a [2026](https://joeflynnpm.com/blog/annual-review-2025) goal by early February. This AI stuff *can* really help productivity. I had a free tier blog at WordPress but I wanted more control with no more cost. I had tried to do this with LLMs on their own last year, but I could not quite do it justice and there was a lot of frustrating copy & pasting. Six months ago I could make pretty but generic [Lovable sites](https://joeflynnpm.com/projects/four-ais-walk-into-a-portfolio-project). These were up to standard visually but a little imprecise, I did not keep working on it. 
+
+Now in a few hours me and my cofounder Claude can go through inception, discovery, documentation, planning, building, and going live *as a team*. (Even if Claude is doing most of the heavy lifting round here). I feel more involved than with the Lovable experience. 
+
+Discovery was fun, I had no strong opinions on what to build so the agent surfaced five very different personal blogs with detailed tech appraisals. We drilled down on what was the site for and what should it look like (dark mode as default of course) thanks [Tania](https://www.taniarascia.com/) for the winning inspiration. We go over the tech, with ease of use and longevity high in my requirements. We talk migration plans. We engineer the right context together. Then Claude Codes. 
+
+Claude codes flawlessly. Plan worked a treat, no errors or unexpected mess. I had a beautiful basic site with dummy data. Adding my first article was more difficult than expected. I learned images pasted into markdown files in Obsidian produce base64 code that adds huge amounts of text to the file. You need to link them. An attempt to migrate the article from Google Docs (my old word processor) caused the images to all get mixed up, the manual correction was the most time I spent doing any one thing, I should not have bothered as...
+
+Next we migrated my existing WordPress articles. Claude connected to the WordPress REST API and migrated all requested articles (20+) and images perfectly by running a script. Some articles became "Projects" with the rest "blogs". It was then formatted and in one commit, one deploy, we had two years of writing on the new site. 
+
+It was so easy I asked if we could build a new section for my Goodreads data. Over 300 rated books & 50+ written reviews. Claude Code wrote a script that converted csv data into Markdown. The next step was hitting the open library API to fetch matching covers - Claude's idea. Again in a single commit, from a single sentence, I had a new section of the site. 
+
+![books](/images/projects/personal-website/books.png)
+
+Nicely done. Say I wonder if you could convert the heat mapper HTML we made and add it to the site? Of course we can. With the right styling and colours. Five minutes from idea to deployment. 
+
+![Analytics](/images/projects/personal-website/Analytics.png)
+
+I had Codex 5.2 run a security check - and it recommended some additions. I shared them with Claude who somewhat reluctantly accepted them as good - before adding another of his own and throwing a little shade at ChatGPT :) A bit of copy polish and addition of real links to my Linkedin, Github, Twitter, and email subscription and V1 is good to go. A few hours work from 0-1. More to come.
+
+**The Dawn of Personal Software**
+
+These are just fun personal projects the tools can obviously do so much more. I have started replying to people at work with HTML files - bespoke interactive pages made just for them. I think it is much better than an email...let's see what the people think. 
+
+![opus overkill](/images/projects/personal-website/opus-overkill.png)
+
+Capabilities will only increase over the coming months. Maybe dramatically. You can learn so much about what's possible, about where you can fit in the coming world by playing around a little. This is more than a change for Product Managers, or even people in 'tech' - if you work on computers your world is changing right now. It will never go back to how it was before. Look at the increase of productivity in coding below. With your new best friend, you too can now code, software shaped problems can be solved. The technical limitations have almost entirely fallen away, the barrier is no longer technical skill, it's the will to start. Start. 
+
+![cc comits](/images/projects/personal-website/cc-comits.png)
+![coding productivity](/images/projects/personal-website/coding-productivity.png)
+
+[Claude Code for PMs course review](https://joeflynnpm.com/blog/claude-code-for-product-managers-course-review)
+
+[Product Managers in the Command Line (interface) ](https://joeflynnpm.com/blog/product-managers-in-the-command-line-interface)
+
+**My website tech stack:**
+
+| Layer | Tool/Tech (free unless stated) |
+|-------|-------------------------------|
+| **Framework** | Next.js (React-based) |
+| **Styling** | Tailwind CSS |
+| **Content format** | MDX (Markdown + JSX) |
+| **Hosting/deployment** | Vercel |
+| **Version control** | GitHub |
+| **Domain registrar** | Porkbun (£8 per Year) |
+| **Development assistant (AKA cofounder)** | Claude Code (existing £18 per month Pro subscription) |
+| **Writing workflow** | Obsidian |
